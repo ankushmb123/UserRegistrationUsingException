@@ -12,8 +12,11 @@ namespace UserRegistrationProblem
         {
             UserRegistration validateUser = new UserRegistration();
             validateUser.validateFirstName("Ankush");
-            Console.WriteLine("--------------------");
+            Console.WriteLine("--------------------------------------");
             validateUser.validateLastName("Bahekar");
+            Console.WriteLine("--------------------------------------");
+            validateUser.validateEmailId("ankushmb9@gmail.com");
+
             Console.ReadKey();
         }
     }
