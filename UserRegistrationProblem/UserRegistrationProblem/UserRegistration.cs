@@ -9,7 +9,7 @@ namespace UserRegistrationProblem
 {
     class UserRegistration
     {
-        //For First NAme
+        //For First Name
         public void validateFirstName(string firstName)
         {
             string stringForFirstName = "^[A-Z][a-z]{3,}?";
@@ -17,20 +17,17 @@ namespace UserRegistrationProblem
             {
 
                 if (Regex.IsMatch(firstName, stringForFirstName))
-                    Console.WriteLine(firstName + " is Valid Firstname");
+                    Console.WriteLine(firstName + " is Valid");
 
                 else
-                    Console.WriteLine(firstName + " is Invalid Firstname");
+                    Console.WriteLine(firstName + " is Invalid");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
         }
-
-
-
-        //For last NAme
+        //For last Name
         public void validateLastName(string lastName)
         {
             try
@@ -38,35 +35,47 @@ namespace UserRegistrationProblem
 
                 string stringForLastName = "^[A-Z][a-z]{3,}?";
                 if (Regex.IsMatch(lastName, stringForLastName))
-                    Console.WriteLine(lastName + " is Valid Lastname");
+                    Console.WriteLine(lastName + " is Valid");
                 else
-                    Console.WriteLine(lastName + " is Invalid Lastname");
+                    Console.WriteLine(lastName + " is Invalid");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
         }
-            
-
-            //For email
-            public void validateEmailId(string emailID)
-
+        //For email
+        public void validateEmailId(string emailID)
+        {
+            try
             {
-                try
-                {
-                    string stringForEmailId = "^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+.)+[a-z]{2,5}$";
-                    if (Regex.IsMatch(emailID, stringForEmailId))
-                        Console.WriteLine(emailID + " is Valid EmailId");
-                    else
-                        Console.WriteLine(emailID + " is Invalid EmailId");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
+                string stringForEmailId = "^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+.)+[a-z]{2,5}$";
+                if (Regex.IsMatch(emailID, stringForEmailId))
+                    Console.WriteLine(emailID + " is Valid");
+                else
+                    Console.WriteLine(emailID + " is Invalid");
             }
-        
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        //For Mobile Number
+        public void validateMobileNumber(string mobileNumber)
+        {
+            try
+            {
+
+                string stringForMobileNumber = "^[0-9]{10}";
+                if (Regex.IsMatch(mobileNumber, stringForMobileNumber))
+                    Console.WriteLine(mobileNumber + " is Valid MobileNumber" );
+                else
+                    Console.WriteLine(mobileNumber + " is Invalid MobileNumber");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
-   
