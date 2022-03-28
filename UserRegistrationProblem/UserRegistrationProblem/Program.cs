@@ -12,7 +12,8 @@ namespace UserRegistrationProblem
         {
             UserRegistration validateUser = new UserRegistration();
             validateUser.validateFirstName("Ankush");
-
+            Console.WriteLine("--------------------");
+            validateUser.validateLastName("Bahekar");
             Console.ReadKey();
         }
     }
