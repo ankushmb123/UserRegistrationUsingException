@@ -21,7 +21,7 @@ namespace UserRegistrationProblem
             Console.WriteLine("---------------------------------------");
             validateUser.validatePassword("Ankush345");
             Console.WriteLine("---------------------------------------");
-
+            validateUser.validateUperCasePassword("Ankush345");
 
             Console.ReadKey();
         }
